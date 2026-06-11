@@ -53,3 +53,64 @@ incident response.
 
 ---
 
+---
+
+## Skills Demonstrated
+
+**Infrastructure & Virtualization**
+- VMware ESXi bare metal deployment and configuration
+- Virtual machine provisioning and resource allocation
+- vSwitch and network configuration
+
+**Linux Administration**
+- Rocky Linux deployment and administration
+- CIS Benchmark hardening implementation
+- Rsyslog configuration and log pipeline management
+- Docker deployment and container management
+- Systemd service management
+
+**SIEM Engineering**
+- Splunk Enterprise deployment via Docker
+- Index configuration and data model design
+- Sourcetype parsing (props.conf, transforms.conf)
+- SPL search development
+- Detection rule creation
+
+**Network Security**
+- Cisco Meraki configuration and log forwarding
+- Network traffic analysis
+- Firewall log interpretation
+
+**Endpoint Security**
+- Sysmon deployment and XML configuration tuning
+- Windows event log analysis
+- Endpoint telemetry pipeline design
+
+**Identity & Access Management**
+- Active Directory deployment (Windows Server 2025)
+- RODC architecture and security design
+- Least privilege implementation
+
+**Cloud & Hybrid**
+- Azure AD / Entra ID
+- Azure Virtual Machines, Blob Storage, NSG configuration
+- Hybrid identity concepts
+
+---
+
+
+Infrastructure        ████████████████████  100% ✅
+OS Hardening          ████████████████████  100% ✅
+Log Pipeline          ████████████████████  100% ✅
+SIEM Deployment       ████████████████████  100% ✅
+Endpoint Telemetry    ████████░░░░░░░░░░░░   40% ⚙️  (scaling in progress)
+Detection Rules       ██████░░░░░░░░░░░░░░   30% ⚙️  (building)
+Dashboards            ████░░░░░░░░░░░░░░░░   20% ⚙️  (building)
+IR Playbooks          ██░░░░░░░░░░░░░░░░░░   10% ⬜ (planned)
+Full Asset Coverage   ████░░░░░░░░░░░░░░░░   20% ⚙️  (scaling)
+
+
+
+*Repository maintained by Ogheneovie Emezana — 
+Security Operations Engineer*  
+*[LinkedIn](https://www.linkedin.com/in/ogheneovie-emezana)*
