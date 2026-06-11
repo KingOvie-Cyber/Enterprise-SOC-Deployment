@@ -100,13 +100,21 @@ incident response.
 
 
 Infrastructure        ████████████████████  100% ✅
+
 OS Hardening          ████████████████████  100% ✅
+
 Log Pipeline          ████████████████████  100% ✅
+
 SIEM Deployment       ████████████████████  100% ✅
+
 Endpoint Telemetry    ████████░░░░░░░░░░░░   40% ⚙️  (scaling in progress)
+
 Detection Rules       ██████░░░░░░░░░░░░░░   30% ⚙️  (building)
+
 Dashboards            ████░░░░░░░░░░░░░░░░   20% ⚙️  (building)
+
 IR Playbooks          ██░░░░░░░░░░░░░░░░░░   10% ⬜ (planned)
+
 Full Asset Coverage   ████░░░░░░░░░░░░░░░░   20% ⚙️  (scaling)
 
 
