@@ -297,7 +297,7 @@ ISO 27001 compliance dashboard     ███████████████
 ## Author
 
 **Ogheneovie Emezana (Kings)**
-Security/IT Engineer | SOC Builder | ISC2 CC | ISO 27001 Lead Auditor
+Security/IT Engineer | SOC Analyst | ISC2 CC | ISO 27001 Lead Auditor
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/ogheneovie-emezana)
 [![GitHub](https://img.shields.io/badge/GitHub-KingOvie--Cyber-black)](https://github.com/KingOvie-Cyber)
