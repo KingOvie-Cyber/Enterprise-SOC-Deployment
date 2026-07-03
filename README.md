@@ -302,14 +302,7 @@ Security/IT Engineer | SOC Analyst | ISC2 CC | ISO 27001 Lead Auditor
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/ogheneovie-emezana)
 [![GitHub](https://img.shields.io/badge/GitHub-KingOvie--Cyber-black)](https://github.com/KingOvie-Cyber)
 
----
-
-## License
-
-This project is licensed under the MIT License.
-See [LICENSE](LICENSE) for details.
-
----
+------
 
 > *"This environment was not built by following a tutorial. 
 > It was built by solving real problems, diagnosing real failures, 
