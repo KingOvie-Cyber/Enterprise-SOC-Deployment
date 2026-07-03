@@ -247,4 +247,4 @@ Retention policy:      90 days (Sysmon/Meraki) / 365 days (Windows)
 > including IP addresses, hostnames, network topology, and security 
 > posture details has been sanitized in accordance with ISO 27001 
 > confidentiality principles. This document describes methodology 
-> and approach, not organizational specifics.
+> and approach, not organizational specifics. 
