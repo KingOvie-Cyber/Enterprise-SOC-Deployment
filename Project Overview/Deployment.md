@@ -56,7 +56,7 @@ Network:  SOC management port group
 
 ### 1.3 Rocky Linux Installation
 
-Rocky Linux 9.x was installed on the SOC VM with the 
+Rocky Linux 10.x was installed on the SOC VM with the 
 following configuration choices:
 
 - Installation type: Server with GUI
@@ -226,6 +226,7 @@ services:
     ports:
       - "8000:8000"
       - "9997:9997"
+      - "8089:8089"
       - "514:514/udp"
     volumes:
       - splunk-var:/opt/splunk/var
