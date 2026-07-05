@@ -49,7 +49,7 @@ Centre capable of:
 
 ```
 In Scope:
-├── Windows workstation endpoints (16-18 hosts)
+├── Windows workstation endpoints (25-28 hosts)
 ├── Cisco Meraki network infrastructure (2-3 sites)
 ├── SOC server infrastructure (VMware ESXi)
 └── Splunk SIEM platform
