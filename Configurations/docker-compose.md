@@ -1,0 +1,98 @@
+# docker-compose.yml — Splunk Enterprise Deployment
+
+**Location:** `~/soc-deployment/splunk/docker-compose.yml`
+
+## Purpose
+
+Deploys Splunk Enterprise as a Docker container with persistent volumes, required port mappings, and a production-appropriate restart policy.
+
+## Usage
+
+| Action  | Command                              |
+|---------|---------------------------------------|
+| Start   | `docker compose up -d`                |
+| Stop    | `docker compose down`                 |
+| Restart | `docker compose restart splunk`       |
+| Logs    | `docker logs -f splunk`               |
+
+> **Important:** Always restart Splunk using `docker compose restart splunk` from the host — **not** via Splunk Web Server Controls. The official Splunk Docker image uses an Ansible entrypoint that causes the container to exit on internal restarts.
+
+## Configuration
+
+```yaml
+version: "3.8"
+
+services:
+  splunk:
+    image: splunk/splunk:latest
+    container_name: splunk
+
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=<REDACTED>
+      # Replace <REDACTED> with a strong admin password
+      # Minimum 8 characters, at least one uppercase,
+      # one lowercase, one digit
+
+    ports:
+      - "8000:8000"      # Splunk Web UI
+      - "9997:9997"      # Universal Forwarder data input
+      - "514:514/udp"    # Syslog input (Cisco Meraki)
+      # NOTE: Port 8089 (Splunk management API) is
+      # intentionally NOT exposed externally.
+      # This reduces attack surface by preventing
+      # remote management API access from outside
+      # the container's local network.
+
+    volumes:
+      - splunk-var:/opt/splunk/var
+      # Contains all indexed event data, search artifacts,
+      # and Splunk internal state. CRITICAL — without this
+      # volume, all indexed data is lost on container
+      # recreation.
+
+      - splunk-etc:/opt/splunk/etc
+      # Contains all Splunk configuration files —
+      # indexes.conf, props.conf, transforms.conf,
+      # saved searches, dashboards, and user settings.
+      # CRITICAL — without this volume, all configuration
+      # is lost on container recreation.
+
+    restart: unless-stopped
+    # Container restarts automatically after server reboots
+    # and most failure conditions.
+    # 'unless-stopped' means deliberately stopped containers
+    # stay stopped after a reboot — preventing unwanted
+    # auto-start after intentional maintenance stops.
+
+volumes:
+  splunk-var:
+    # Named volume for Splunk indexed data
+    # Persists independently of container lifecycle
+
+  splunk-etc:
+    # Named volume for Splunk configuration
+    # Persists independently of container lifecycle
+```
+
+## Deployment Notes
+
+**First start:**
+```bash
+docker compose up -d
+docker logs -f splunk
+# Wait for initialization to complete (~2-4 minutes)
+# Access: http://<server-ip>:8000
+```
+
+**Verify volumes are mounted:**
+```bash
+docker inspect splunk | grep -A 20 "Mounts"
+```
+
+**Upgrade Splunk:**
+```bash
+docker compose pull
+docker compose up -d --force-recreate
+# Data and config survive via persistent volumes
+```
