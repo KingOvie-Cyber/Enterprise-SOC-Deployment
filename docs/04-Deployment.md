@@ -83,7 +83,7 @@ Hardening was applied BEFORE connecting to the production
 network or receiving any log data. Security configuration 
 is a prerequisite, not an afterthought.
 
-Full hardening procedure: [Hardening.md](Hardening.md)
+Full hardening procedure: [05-Hardening.md](05-Hardening.md)
 
 ### 2.1 System Update
 
