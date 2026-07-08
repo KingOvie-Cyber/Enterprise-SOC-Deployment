@@ -74,7 +74,7 @@ to ensure it takes precedence over defaults.
 - Windows endpoint with administrative access
 - Splunk Universal Forwarder MSI installer
 - Network connectivity to Splunk server on TCP 9997
-- Sysmon already installed (see [Sysmon.md](Sysmon.md))
+- Sysmon already installed (see [08-Sysmon.md](08-Sysmon.md))
 
 ### Installation Command
 
