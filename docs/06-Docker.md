@@ -17,7 +17,7 @@ management procedures.
 
 The decision to containerize Splunk rather than install it 
 natively on Rocky Linux was deliberate. The key reasons are 
-documented in [Design-Decisions.md](Design-Decisions.md), 
+documented in [03-Design-Decisions.md](03-Design-Decisions.md), 
 but are summarized here:
 
 **Application/OS separation:** Splunk configuration and data 
