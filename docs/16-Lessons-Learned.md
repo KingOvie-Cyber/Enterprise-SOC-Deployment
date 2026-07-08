@@ -66,7 +66,7 @@ of alerts means the absence of threats.
 ### The Principle
 Build verification into every stage of deployment. Never 
 assume something is working — prove it. The diagnostic 
-flowchart in [Troubleshooting.md](Troubleshooting.md) 
+flowchart in [15-Troubleshooting.md](15-Troubleshooting.md) 
 was developed directly from the experience of hunting 
 silent failures.
 
