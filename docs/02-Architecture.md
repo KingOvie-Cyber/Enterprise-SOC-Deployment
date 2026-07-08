@@ -187,7 +187,7 @@ invisible to standard Windows Event Logs:
 - Registry modifications (EventCode 12/13/14)
 - DNS queries (EventCode 22)
 - DLL/image loads (EventCode 7)
-- And more — see [Sysmon.md](Sysmon.md) for full coverage
+- And more — see [08-Sysmon.md](08-Sysmon.md) for full coverage
 
 Sysmon configuration is based on the Olaf Hartong modular 
 community configuration, tuned to balance detection coverage 
