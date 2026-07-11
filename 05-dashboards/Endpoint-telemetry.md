@@ -119,6 +119,6 @@ earliest=$global_time.earliest$ latest=$global_time.latest$
 
 ---
 
-> See [Sysmon.md](../docs/08-Sysmon.md) and 
-> [SPL-Queries.md](../docs/14-SPL-Queries.md) for 
+> See [08-Sysmon.md](../01-docs/PHASE%203%20-%20COMPONENTS%20CONFIGURATION/08-Sysmon.md) and 
+> [14-SPL-Queries.md](../01-docs/PHASE%205%20-%20OPERATIONS/14-SPL-Queries.md) for 
 > full event code reference and query library.
