@@ -101,5 +101,5 @@ earliest=$global_time.earliest$ latest=$global_time.latest$
 
 ---
 
-> See [Cisco-Meraki.md](../docs/10-Cisco-Meraki.md) for 
+> See [Cisco-Meraki.md](../01-docs/PHASE%203%20-%20COMPONENTS%20CONFIGURATION/10-Cisco-Meraki.md) for 
 > full integration and field extraction documentation.
