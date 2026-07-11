@@ -107,5 +107,5 @@ Only one time picker should exist with token name
 
 ---
 
-> See [Dashboard-Development.md](../01-docs/PHASE-5-OPERATIONS/13-Dashboard-Development.md) 
+> See [13-Dashboard-Development.md](../01-docs/PHASE-5-OPERATIONS/13-Dashboard-Development.md) 
 > for full step-by-step build instructions.
