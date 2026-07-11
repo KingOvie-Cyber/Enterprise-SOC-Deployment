@@ -100,7 +100,5 @@ Dashboard → Actions → Export as PDF
 
 Provides a point-in-time evidence document for auditors.
 
----
-
-> See [Dashboard-Development.md](../docs/13-Dashboard-Development.md)
+> See [Dashboard-Development.md](../01-docs/PHASE%205%20-%20OPERATIONS/13-Dashboard-Development.md)
 > for full build instructions and token wiring details.
