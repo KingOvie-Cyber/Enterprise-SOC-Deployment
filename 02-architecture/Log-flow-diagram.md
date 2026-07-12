@@ -5,52 +5,7 @@
 
 ## End-to-End Log Flow
 
-```
-ENDPOINT PATH
-─────────────────────────────────────────────────
-Windows Endpoint
-    │
-    ├── Sysmon → Microsoft-Windows-Sysmon/Operational
-    └── Windows → Security / System / Application
-                        │
-              Splunk Universal Forwarder
-              reads event log channels
-              inputs.conf: index=sysmon / index=windows
-                        │
-                  TCP Port 9997
-                        │
-                        ▼
-
-NETWORK PATH
-─────────────────────────────────────────────────
-Cisco Meraki Appliance
-    │
-    ├── Appliance Event Log (firewall, VPN, security)
-    └── Appliance URLs (web requests)
-                        │
-                  UDP Syslog Port 514
-                        │
-                        ▼
-
-SPLUNK RECEIVES (Both Paths)
-─────────────────────────────────────────────────
-                        │
-              props.conf — parse timestamp
-              props.conf — assign sourcetype
-              transforms.conf — route to index
-                        │
-              ┌─────────┴──────────┐
-              ▼                    ▼
-        [sysmon index]      [meraki index]
-        [windows index]
-              │
-    Hot → Warm → Cold → Frozen
-    (Data lifecycle managed by indexes.conf)
-              │
-              ▼
-    SEARCHABLE IN SPLUNK
-    Dashboards / Alerts / Investigation
-```
+<img width="1472" height="1800" alt="image" src="https://github.com/user-attachments/assets/f645d4ab-8045-415e-9b8c-0381d4be9231" />
 
 ---
 
