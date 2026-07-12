@@ -45,33 +45,7 @@ threat detection, and compliance evidence generation.
 
 ## Architecture Overview
 
-```
-                        PRODUCTION NETWORK
-                               |
-               +---------------+---------------+
-               |                               |
-        [Cisco Meraki]                  [Windows Endpoints]
-        Firewall/Switch                  Sysmon + UF
-        Syslog UDP 514                   Port 9997
-               |                               |
-               +---------------+---------------+
-                               |
-                    [Rocky Linux Server]
-                    VMware ESXi (Bare Metal)
-                    +-----------------------+
-                    |  Docker Container     |
-                    |  Splunk Enterprise    |
-                    |  Port 8000 (Web UI)   |
-                    |  Port 9997 (Receive)  |
-                    |  Port 514  (Syslog)   |
-                    +-----------------------+
-                               |
-                    +----------+----------+
-                    |                     |
-              [Dashboards]           [Alerts]
-              [Detection]            [Reports]
-              [Compliance]           [Evidence]
-```
+![SOC Architecture Diagram](./02-architecture/soc_architecture_diagram.png)
 
 ---
 
