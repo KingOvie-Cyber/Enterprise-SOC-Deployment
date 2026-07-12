@@ -258,7 +258,7 @@ ISO 27001 compliance dashboard     ███████████████
 
 ## Future Improvements
 
-- Scale Sysmon deployment to all 16-18 production endpoints
+- Scale Sysmon deployment to all 16-32 production endpoints
 - Integrate Microsoft 365 / Entra ID sign-in logs
 - Add vulnerability scanner log ingestion (OpenVAS/Nessus)
 - Implement automated incident response playbook execution
