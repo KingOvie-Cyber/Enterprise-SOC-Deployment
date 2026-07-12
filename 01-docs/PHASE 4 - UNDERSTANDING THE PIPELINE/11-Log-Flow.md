@@ -21,41 +21,9 @@ Understanding the full data pipeline is essential for:
 
 ## Pipeline Overview
 
-```
-EVENT OCCURS
-     |
-     ├── On a Windows endpoint → Sysmon/Windows Event Log path
-     └── On the Cisco Meraki   → Network syslog path
 
-                    ↓                           ↓
 
-        ENDPOINT PATH                   NETWORK PATH
-        ───────────                     ────────────
-        Sysmon captures event           Meraki captures event
-              |                               |
-        Windows Event Log                     |
-              |                               |
-        UF reads event                        |
-              |                               |
-        UF ships via TCP 9997          UDP Syslog port 514
-              |                               |
-              └───────────┬───────────────────┘
-                          |
-                   SPLUNK RECEIVES
-                          |
-                   Props.conf parsing
-                   Sourcetype assignment
-                   Timestamp normalization
-                          |
-                   Transforms.conf routing
-                   Index assignment
-                          |
-                   INDEX WRITTEN
-                   (Hot bucket → Warm → Cold → Frozen)
-                          |
-                   SEARCHABLE IN SPLUNK
-                   Dashboards / Alerts / Investigation
-```
+<img width="1472" height="1800" alt="image" src="https://github.com/user-attachments/assets/b5399f2b-ba7e-458f-a43c-8c5c2d08c478" />
 
 ---
 
